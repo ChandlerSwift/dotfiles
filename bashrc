@@ -111,3 +111,18 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Allow case-insensitive tab completion
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+
+# Allow extra non-version controlled commands to be added.
+# Currently this is used primarily for extra work aliases.
+if [ -f ~/.config/bash_extra/bashrc ]; then
+    . ~/.config/bash_extra/bashrc
+fi
+
+# Allow running `pipenv` from directories below the root-2.
+export PIPENV_MAX_DEPTH=10
+
+export PIPENV_HIDE_EMOJIS=true
