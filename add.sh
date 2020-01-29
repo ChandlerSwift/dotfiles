@@ -24,10 +24,13 @@ fi
 original_location=$(get_abs_filename $1)
 new_location=$(dirname $(get_abs_filename $0))
 
+old_filename=$(basename $1)
+new_filename=$(sed 's/^\.//' <<< $old_filename)
+
 echo "Moving $original_location to $new_location."
-mv $original_location $new_location
+mv $original_location $new_location/$new_filename
 
 echo "Creating symlink $original_location -> $new_location."
-ln -s $new_location/$(basename $1) $original_location
+ln -s $new_location/$new_filename $original_location
 
-echo "Done! You may want to add $(basename $1) to version control."
+echo "Done! You may want to add $new_location/$new_filename to version control."
