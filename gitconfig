@@ -6,3 +6,4 @@
 	gpgsign = true
 [core]
 	excludesfile = /home/chandler/.gitignore_global
+	editor = vim
