@@ -1,3 +1,6 @@
+" Optionally, we could include the defaults.vim file.
+"source $VIMRUNTIME/defaults.vim
+
 set number
 syntax on
 
@@ -13,3 +16,6 @@ hi SpecialKey ctermfg=DarkGray
 " Show status line with full filename
 set laststatus=2
 set statusline+=%F
+
+" Turn on filetype detection, automatic per-filetype loading, and indentation
+filetype plugin indent on
