@@ -1,6 +1,9 @@
 set nocompatible
-filetype off
 
+"==============
+" Begin Vundle
+"==============
+filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -10,8 +13,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'junegunn/fzf'
 
+Plugin 'airblade/vim-gitgutter'
+set updatetime=100
+
 call vundle#end()
 filetype plugin indent on
+
+"==============
+" End Vundle
+"==============
 
 set number
 syntax on
