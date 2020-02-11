@@ -126,3 +126,7 @@ fi
 export PIPENV_MAX_DEPTH=10
 
 export PIPENV_HIDE_EMOJIS=true
+
+# unified Bash history
+# from https://superuser.com/a/734410
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
