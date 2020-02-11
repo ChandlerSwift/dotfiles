@@ -38,3 +38,9 @@ hi SpecialKey ctermfg=DarkGray
 " Show status line with full filename
 set laststatus=2
 set statusline+=%F
+
+" Keep my fingers on the home row
+nnoremap <Left> :echoe "Try h"<CR>
+nnoremap <Right> :echoe "Try l"<CR>
+nnoremap <Up> :echoe "Try k"<CR>
+nnoremap <Down> :echoe "Try j"<CR>
