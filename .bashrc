@@ -130,3 +130,7 @@ export PIPENV_HIDE_EMOJIS=true
 # unified Bash history
 # from https://superuser.com/a/734410
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+if [ -f ~/.config/bash/`hostname`.sh ]; then
+	. ~/.config/bash/`hostname`.sh
+fi
