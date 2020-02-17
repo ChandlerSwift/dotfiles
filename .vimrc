@@ -13,6 +13,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'junegunn/fzf'
 
+Plugin 'sheerun/vim-polyglot'
+
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 set updatetime=100
 
