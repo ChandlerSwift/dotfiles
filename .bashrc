@@ -134,3 +134,10 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 if [ -f ~/.config/bash/`hostname`.sh ]; then
 	. ~/.config/bash/`hostname`.sh
 fi
+
+up() {
+	for (( i=0; i<${1:-1}; i++ )); do
+		cd ..
+	done
+	pwd
+}
