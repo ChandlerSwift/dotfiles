@@ -141,3 +141,5 @@ up() {
 	done
 	pwd
 }
+
+export EDITOR=vim
