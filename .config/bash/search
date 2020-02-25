@@ -5,7 +5,7 @@ SEARCH_DEFAULT_BROWSER='firefox'
 function search_with_prefix() {
 	search_string=$1
 	shift
-	search_string="$search_string$(sed 's/ /\+/g' <<< $@)"
+	search_string="$search_string$(sed 's/\+/%2B/g;s/ /\+/g' <<< $@)"
 	$SEARCH_DEFAULT_BROWSER "$search_string"
 }
 
