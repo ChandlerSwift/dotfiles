@@ -131,8 +131,8 @@ export PIPENV_HIDE_EMOJIS=true
 # from https://superuser.com/a/734410
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-if [ -f ~/.config/bash/`hostname`.sh ]; then
-	. ~/.config/bash/`hostname`.sh
+if [ -f ~/.config/bash/by_hostname/`hostname`.sh ]; then
+	. ~/.config/bash/by_hostname/`hostname`.sh
 fi
 
 up() {
