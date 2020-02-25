@@ -118,8 +118,8 @@ bind "set show-all-if-ambiguous on"
 
 # Allow extra non-version controlled commands to be added.
 # Currently this is used primarily for extra work aliases.
-if [ -f ~/.config/bash_extra/bashrc ]; then
-	. ~/.config/bash_extra/bashrc
+if [ -f ~/.config/bash/private/bashrc ]; then
+	. ~/.config/bash/private/bashrc
 fi
 
 # Allow running `pipenv` from directories below the root-2.
