@@ -143,3 +143,5 @@ up() {
 }
 
 export EDITOR=vim
+
+source ~/.config/bash/search

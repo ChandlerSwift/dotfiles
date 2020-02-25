@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+SEARCH_DEFAULT_BROWSER='firefox'
+
+function search_with_prefix() {
+	search_string=$1
+	shift
+	search_string="$search_string$(sed 's/ /\+/g' <<< $@)"
+	$SEARCH_DEFAULT_BROWSER "$search_string"
+}
+
+function ddg() {
+	search_with_prefix "https://duckduckgo.com/?q=" $@
+}
+
+alias duckduckgo='ddg'
+
+function google() {
+	search_with_prefix "https://google.com/search?q=" $@
+}
+
+function wa() {
+	search_with_prefix "https://wolframalpha.com/input/?i=" $@
+}
