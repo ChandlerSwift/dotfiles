@@ -1,6 +1,9 @@
 set nocompatible
-filetype off
 
+"==============
+" Begin Vundle
+"==============
+filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -10,8 +13,18 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'junegunn/fzf'
 
+Plugin 'sheerun/vim-polyglot'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+set updatetime=100
+
 call vundle#end()
 filetype plugin indent on
+
+"==============
+" End Vundle
+"==============
 
 set number
 syntax on
@@ -28,3 +41,9 @@ hi SpecialKey ctermfg=DarkGray
 " Show status line with full filename
 set laststatus=2
 set statusline+=%F
+
+" Keep my fingers on the home row
+nnoremap <Left> :echoe "Try h"<CR>
+nnoremap <Right> :echoe "Try l"<CR>
+nnoremap <Up> :echoe "Try k"<CR>
+nnoremap <Down> :echoe "Try j"<CR>

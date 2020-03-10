@@ -1,9 +1,0 @@
-[user]
-	name = Chandler Swift
-	email = chandler.swift@pearson.com
-	signingkey = 53F9CFE1AED73DC8996A555BB123483B24A4D579
-[commit]
-	gpgsign = true
-[core]
-	excludesfile = /home/chandler/.gitignore_global
-	editor = vim
