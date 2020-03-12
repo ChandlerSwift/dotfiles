@@ -39,8 +39,8 @@ cnoremap <F5> <C-c>:set list!<CR>
 hi SpecialKey ctermfg=DarkGray
 
 " Show status line with full filename
-set laststatus=2
-set statusline+=%F
+"set laststatus=2
+"set statusline+=%F
 
 " Keep my fingers on the home row
 nnoremap <Left> :echoe "Try h"<CR>

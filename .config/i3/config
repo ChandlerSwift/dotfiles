@@ -178,3 +178,13 @@ bar {
 	status_command i3status
 	mode hide
 }
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+slash move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+slash scratchpad show
+
+for_window [class="st"] border pixel 3
+
+bindsym $mod+Shift+M exec "scrot -s --exec 'mv $f ~/screenshots/'"
