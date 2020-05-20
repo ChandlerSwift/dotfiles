@@ -21,3 +21,5 @@ bindkey "^[[1;5D" backward-word
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 export EDITOR=vim
+
+export PATH=$HOME/bin:$PATH
