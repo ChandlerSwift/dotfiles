@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ -x /usr/bin/hostname ] && exec /usr/bin/hostname
+
+echo $HOSTNAME
