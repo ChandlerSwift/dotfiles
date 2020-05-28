@@ -23,3 +23,8 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export EDITOR=vim
 
 export PATH=$HOME/bin:$PATH
+
+# https://wiki.archlinux.org/index.php/Zsh#Prompts
+autoload -Uz promptinit
+promptinit
+prompt redhat
