@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-	xterm-color|*-256color) color_prompt=yes;;
+	xterm-color|*-256color|screen|xterm-termite) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -145,3 +145,8 @@ up() {
 export EDITOR=vim
 
 source ~/.config/bash/search
+
+command -v kubectl >/dev/null 2>&1 &&
+	alias k=kubectl &&
+	source <(kubectl completion bash) &&
+	complete -F __start_kubectl k

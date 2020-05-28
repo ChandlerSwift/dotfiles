@@ -26,6 +26,12 @@ if [ -d "$HOME/.local/bin" ] ; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 
+for dir in $HOME/go/bin ; do
+	if [ -d "$dir" ] ; then
+		PATH="$dir:$PATH"
+	fi
+done
+
 # from https://wiki.archlinux.org/index.php/Xinit#Autostart_X_at_login
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 	exec startx
