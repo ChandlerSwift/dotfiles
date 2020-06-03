@@ -16,6 +16,7 @@ order += "wireless _first_"
 #order += "ethernet _first_"
 order += "battery all"
 order += "disk /"
+order += "cpu_usage"
 order += "load"
 order += "memory"
 order += "tztime local"
@@ -37,6 +38,10 @@ battery all {
 disk "/" {
 	format = "%avail"
 	low_threshold = "10"
+}
+
+cpu_usage {
+	format = "%usage"
 }
 
 load {
