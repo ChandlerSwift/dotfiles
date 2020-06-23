@@ -22,9 +22,16 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 export EDITOR=vim
 
-export PATH=$HOME/bin:$PATH
+for dir in $HOME/.local/bin $HOME/bin; do
+	export PATH=$dir:$PATH
+done
 
 # https://wiki.archlinux.org/index.php/Zsh#Prompts
 autoload -Uz promptinit
 promptinit
 prompt redhat
+
+# Allow running `pipenv` from directories below the root-2.
+export PIPENV_MAX_DEPTH=10
+
+export PIPENV_HIDE_EMOJIS=true
