@@ -22,8 +22,8 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 export EDITOR=vim
 
-for dir in $HOME/.local/bin $HOME/bin; do
-	export PATH=$dir:$PATH
+for dir in $HOME/.local/bin $HOME/bin $HOME/go/bin; do
+	[ -d $dir ] && export PATH=$dir:$PATH
 done
 
 # https://wiki.archlinux.org/index.php/Zsh#Prompts
