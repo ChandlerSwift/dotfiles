@@ -10,5 +10,6 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	# Fix Firefox in Wayland
 	export MOZ_ENABLE_WAYLAND=1
 
+	eval `ssh-agent`
 	exec sway
 fi
