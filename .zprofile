@@ -10,6 +10,12 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	# Fix Firefox in Wayland
 	export MOZ_ENABLE_WAYLAND=1
 
+	# Save screenshots to Pictures/screenshots
+	if [ ! -d "$HOME/Pictures/screenshots" ]; then
+		mkdir -p "$HOME/Pictures/screenshots"
+	fi
+	export GRIM_DEFAULT_DIR="$HOME/Pictures/screenshots"
+
 	eval `ssh-agent`
 	exec sway
 fi
