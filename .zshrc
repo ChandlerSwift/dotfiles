@@ -35,3 +35,15 @@ prompt redhat
 export PIPENV_MAX_DEPTH=10
 
 export PIPENV_HIDE_EMOJIS=true
+
+if [ -f ~/.config/zsh/by_hostname/`hostname`.sh ]; then
+	source ~/.config/zsh/by_hostname/`hostname`.sh
+fi
+
+if [ -f ~/.config/zsh/private/zsh ]; then
+	source ~/.config/zsh/private/zsh
+fi
+
+source ~/.config/zsh/search
+
+export EDITOR=vim

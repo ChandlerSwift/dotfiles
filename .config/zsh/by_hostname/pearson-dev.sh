@@ -15,4 +15,17 @@ function __fix_display() {
 	xrandr --output VGA-2 --mode 1920x1200 $1 VGA-1
 }
 
-export TERMINAL=st
+alias k=kubectl
+
+change_sub() {
+	if [[ $# -ne 2 ]]; then
+		cat <<EOF
+Wrong number of args! Expecting 2.
+
+Usage: change_sub current_sub new_sub
+EOF
+	fi
+	cd $(pwd | sed "s/$1/$2/g")
+}
+
+
