@@ -178,3 +178,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 bindsym Print exec grim -g "$(slurp)"
 bindsym $mod+p exec grim -g "$(slurp)"
+
+# Note that there's a trailing comma; this seems to be required if I want the
+# final directive to take effect, and I'm not sure why. Anyway, here it sits.
+input type:keyboard xkb_options caps:escape,compose:ralt,;
