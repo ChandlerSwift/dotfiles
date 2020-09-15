@@ -16,6 +16,7 @@ function __fix_display() {
 }
 
 alias k=kubectl
+source <(kubectl completion zsh)
 
 change_sub() {
 	if [[ $# -ne 2 ]]; then
