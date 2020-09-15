@@ -1,3 +1,5 @@
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+# https://stackoverflow.com/a/56264110
+DIR=$(dirname ${(%):-%x})
 
+echo including $DIR/pearson-dev.sh
 source $DIR/pearson-dev.sh
