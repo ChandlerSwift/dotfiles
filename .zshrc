@@ -27,9 +27,8 @@ for dir in $HOME/.local/bin $HOME/bin $HOME/go/bin; do
 done
 
 # https://wiki.archlinux.org/index.php/Zsh#Prompts
-autoload -Uz promptinit
-promptinit
-prompt redhat
+export PROMPT="%(?..%F{red}[%?]%f )%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# "
+export RPROMPT='[%F{yellow}%*%f]'
 
 # Allow running `pipenv` from directories below the root-2.
 export PIPENV_MAX_DEPTH=10
