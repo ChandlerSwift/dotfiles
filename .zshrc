@@ -46,3 +46,5 @@ fi
 source ~/.config/zsh/search
 
 export EDITOR=vim
+
+alias ls="ls --color=auto"
