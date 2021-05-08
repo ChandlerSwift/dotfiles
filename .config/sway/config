@@ -189,4 +189,4 @@ input type:keyboard xkb_options caps:escape,compose:ralt,;
 # Perhaps in the future, we could integrate Alacritty's title bar with `ssh`
 # to provide the hostname (or at least with (ba|z)sh to provide the currently
 # running command in the title bar?
-for_window [app_id="firefox|Alacritty"] border pixel 2
+for_window [app_id="firefox|Alacritty|foot"] border pixel 2
