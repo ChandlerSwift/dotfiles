@@ -178,7 +178,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 bindsym Print exec grim -g "$(slurp -o)"
 bindsym Shift+Print exec swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height) \(.app_id // .window_properties.class)"' | slurp | grim -g -
-bindsym $mod+p exec grim -g "$(slurp)"
+bindsym $mod+p exec grim -g "$(slurp -o)"
 
 # Note that there's a trailing comma; this seems to be required if I want the
 # final directive to take effect, and I'm not sure why. `man xkeyboard-config`
