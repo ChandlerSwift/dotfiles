@@ -1,0 +1,16 @@
+/home/chandler/.cache
+/home/chandler/Qt
+/home/chandler/.local
+/home/chandler/go
+/home/chandler/Android
+/home/chandler/.vscode
+/home/chandler/.config/*/*cache*
+/home/chandler/.config/*/*Cache*
+/home/chandler/.npm
+/home/chandler/.gradle
+/home/chandler/.rustup
+/home/chandler/.cargo
+/home/chandler/.nvm
+/home/chandler/.vscode-server
+/home/chandler/.ftba
+/home/chandler/projects/thunderbird
