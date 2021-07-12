@@ -176,9 +176,25 @@ include ~/.config/sway/`hostname`
 bindsym XF86MonBrightnessUp exec brightnessctl s +10%
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
-bindsym Print exec grim -g "$(slurp -o)"
-bindsym Shift+Print exec swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height) \(.app_id // .window_properties.class)"' | slurp | grim -g -
-bindsym $mod+p exec grim -g "$(slurp -o)"
+# Screen captures:
+# PrintScr or $mod+p for screenshot
+# Shift copies to clipboard instead of saving to file
+# Alt takes window instead of selection
+# Control takes output instead of selection
+bindsym Print exec /usr/share/sway/scripts/grimshot save area $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym $mod+p exec /usr/share/sway/scripts/grimshot save area $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym Shift+Print exec /usr/share/sway/scripts/grimshot copy area
+bindsym $mod+Shift+p exec /usr/share/sway/scripts/grimshot copy area
+
+bindsym Alt+Print exec /usr/share/sway/scripts/grimshot save window $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym $mod+Alt+p exec /usr/share/sway/scripts/grimshot save window $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym Alt+Shift+Print exec /usr/share/sway/scripts/grimshot copy window
+bindsym $mod+Alt+Shift+p exec /usr/share/sway/scripts/grimshot copy window
+
+bindsym Ctrl+Print exec /usr/share/sway/scripts/grimshot save output $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym $mod+Ctrl+p exec /usr/share/sway/scripts/grimshot save output $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym Ctrl+Shift+Print exec /usr/share/sway/scripts/grimshot copy output
+bindsym $mod+Ctrl+Shift+Print exec /usr/share/sway/scripts/grimshot copy output
 
 # Note that there's a trailing comma; this seems to be required if I want the
 # final directive to take effect, and I'm not sure why. `man xkeyboard-config`
