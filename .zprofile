@@ -16,6 +16,9 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	fi
 	export GRIM_DEFAULT_DIR="$HOME/Pictures/screenshots"
 
+	# Make Swing apps work (https://github.com/xmonad/xmonad/issues/126)
+	export _JAVA_AWT_WM_NONREPARENTING=1
+
 	eval `ssh-agent`
 	exec sway
 fi
