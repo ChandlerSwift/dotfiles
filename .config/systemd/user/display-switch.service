@@ -1,0 +1,12 @@
+# https://github.com/haimgel/display-switch
+[Unit]
+Description=Display switch via USB switch
+
+[Service]
+ExecStart=/home/chandler/bin/display_switch
+Type=simple
+StandardOutput=journal
+Restart=always
+
+[Install]
+WantedBy=default.target
