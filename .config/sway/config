@@ -208,3 +208,5 @@ input type:keyboard xkb_options caps:escape,compose:ralt,;
 for_window [app_id="firefox|Alacritty|foot"] border pixel 2
 
 exec mako
+
+exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
