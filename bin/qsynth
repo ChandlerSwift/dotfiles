@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if command -v pw-jack > /dev/null; then
+	pw-jack /usr/bin/qsynth "$@"
+else
+	/usr/bin/qsynth "$@"
+fi
