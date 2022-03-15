@@ -1,5 +1,6 @@
 export PATH=$HOME/bin:$PATH
 export HOSTNAME=`hostname`
+export GOPATH=~/.local/share/go
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	# Enable mouse cursor for hardware interface in virtual machines

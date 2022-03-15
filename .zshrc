@@ -22,7 +22,7 @@ bindkey "^[[1;5D" backward-word
 
 export EDITOR=vim
 
-for dir in $HOME/.local/bin $HOME/bin $HOME/go/bin; do
+for dir in $HOME/.local/bin $HOME/bin $HOME/.local/share/go/bin; do
 	[ -d $dir ] && export PATH=$dir:$PATH
 done
 
