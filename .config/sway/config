@@ -200,7 +200,7 @@ bindsym $mod+Ctrl+Shift+Print exec /usr/share/sway/scripts/grimshot copy output
 # Note that there's a trailing comma; this seems to be required if I want the
 # final directive to take effect, and I'm not sure why. `man xkeyboard-config`
 # for more info.
-input type:keyboard xkb_options caps:escape,compose:ralt,;
+input type:keyboard xkb_options caps:escape,compose:ralt,
 
 # Disable (unhelpful) title bar for Alacritty and Firefox
 # Perhaps in the future, we could integrate Alacritty's title bar with `ssh`
