@@ -1,2 +1,11 @@
-output HDMI-A-1 pos 0 0
-output DP-3 pos 1920 0
+output DP-7 {
+	pos 0 0
+	transform 270
+}
+output DP-4 pos 1200 400
+
+output DP-5 {
+	pos 0 0
+	transform 270
+}
+output DP-3 pos 1200 400
