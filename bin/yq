@@ -1,0 +1,8 @@
+#!/bin/sh
+
+>&2 echo '`yq` has two different implementations:'
+>&2 echo 'the `yq` package (python `jq` wrapper; https://github.com/kislyuk/yq)'
+>&2 echo 'and the `go-yq` package (golang rewrite; https://github.com/mikefarah/yq)'
+>&2 echo "You're using the one from \`$(pacman -Qqo /usr/bin/yq)\`."
+>&2 echo
+/usr/bin/yq "$@"
