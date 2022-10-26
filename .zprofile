@@ -14,6 +14,7 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 
 	# Fix Firefox in Wayland
 	export MOZ_ENABLE_WAYLAND=1
+	export GDK_BACKEND=wayland
 
 	# Save screenshots to Pictures/screenshots
 	if [ ! -d "$HOME/Pictures/screenshots" ]; then
