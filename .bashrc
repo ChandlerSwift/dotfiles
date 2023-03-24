@@ -144,8 +144,6 @@ up() {
 
 export EDITOR=vim
 
-source ~/.config/bash/search
-
 command -v kubectl >/dev/null 2>&1 &&
 	alias k=kubectl &&
 	source <(kubectl completion bash) &&
