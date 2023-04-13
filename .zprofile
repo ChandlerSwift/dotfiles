@@ -6,6 +6,8 @@ export GOPATH=~/.local/share/go
 export GOPROXY=direct
 export GONOSUMDB=off
 
+export BUILDKIT_PROGRESS=plain
+
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	# Enable mouse cursor for hardware interface in virtual machines
 	if [[ $HOSTNAME =~ "-vm" ]]; then
