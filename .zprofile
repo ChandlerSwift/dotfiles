@@ -29,9 +29,5 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 
 	export XDG_CURRENT_DESKTOP=sway
 	eval `ssh-agent`
-	if [[ $HOSTNAME == *-vm ]]; then
-		exec sway-git
-	else
-		exec sway
-	fi
+	exec sway
 fi
