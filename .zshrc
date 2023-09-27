@@ -48,3 +48,4 @@ source ~/.config/zsh/search
 export EDITOR=vim
 
 alias ls="ls --color=auto"
+command -v atuin >/dev/null && eval "$(atuin init --disable-up-arrow zsh)"
