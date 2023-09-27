@@ -1,2 +1,3 @@
 output Virtual-1 mode 1920x1200 scale 1
 exec vmware-user
+exec vmhgfs-fuse .host:/shared-with-vm ~/shared-with-host
