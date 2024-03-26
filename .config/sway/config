@@ -214,3 +214,5 @@ exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 exec "/usr/lib/kdeconnectd"
 
 bindsym $mod+Shift+d exec makoctl dismiss --all
+
+exec '~/bin/watch-public-ip.sh'
