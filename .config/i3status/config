@@ -17,6 +17,7 @@ order += "ethernet _first_"
 order += "read_file public_ip"
 #order += "battery all"
 order += "disk /"
+order += "disk /home"
 order += "cpu_usage"
 order += "load"
 order += "memory"
@@ -43,7 +44,12 @@ battery all {
 }
 
 disk "/" {
-	format = "%avail"
+	format = "/: %free/%total"
+	low_threshold = "10"
+}
+
+disk "/home" {
+	format = "/home: %free/%total"
 	low_threshold = "10"
 }
 
