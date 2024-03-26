@@ -181,20 +181,20 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 # Shift copies to clipboard instead of saving to file
 # Alt takes window instead of selection
 # Control takes output instead of selection
-bindsym Print exec /usr/share/sway/scripts/grimshot save area $(date +%Y%m%d_%Hh%Mm%Ss.png)
-bindsym $mod+p exec /usr/share/sway/scripts/grimshot save area $(date +%Y%m%d_%Hh%Mm%Ss.png)
-bindsym Shift+Print exec /usr/share/sway/scripts/grimshot copy area
-bindsym $mod+Shift+p exec /usr/share/sway/scripts/grimshot copy area
+bindsym Print exec /usr/share/sway-contrib/grimshot save area $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym $mod+p exec /usr/share/sway-contrib/grimshot save area $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym Shift+Print exec /usr/share/sway-contrib/grimshot copy area
+bindsym $mod+Shift+p exec /usr/share/sway-contrib/grimshot copy area
 
-bindsym Alt+Print exec /usr/share/sway/scripts/grimshot save window $(date +%Y%m%d_%Hh%Mm%Ss.png)
-bindsym $mod+Alt+p exec /usr/share/sway/scripts/grimshot save window $(date +%Y%m%d_%Hh%Mm%Ss.png)
-bindsym Alt+Shift+Print exec /usr/share/sway/scripts/grimshot copy window
-bindsym $mod+Alt+Shift+p exec /usr/share/sway/scripts/grimshot copy window
+bindsym Alt+Print exec /usr/share/sway-contrib/grimshot save window $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym $mod+Alt+p exec /usr/share/sway-contrib/grimshot save window $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym Alt+Shift+Print exec /usr/share/sway-contrib/grimshot copy window
+bindsym $mod+Alt+Shift+p exec /usr/share/sway-contrib/grimshot copy window
 
-bindsym Ctrl+Print exec /usr/share/sway/scripts/grimshot save output $(date +%Y%m%d_%Hh%Mm%Ss.png)
-bindsym $mod+Ctrl+p exec /usr/share/sway/scripts/grimshot save output $(date +%Y%m%d_%Hh%Mm%Ss.png)
-bindsym Ctrl+Shift+Print exec /usr/share/sway/scripts/grimshot copy output
-bindsym $mod+Ctrl+Shift+Print exec /usr/share/sway/scripts/grimshot copy output
+bindsym Ctrl+Print exec /usr/share/sway-contrib/grimshot save output $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym $mod+Ctrl+p exec /usr/share/sway-contrib/grimshot save output $(date +%Y%m%d_%Hh%Mm%Ss.png)
+bindsym Ctrl+Shift+Print exec /usr/share/sway-contrib/grimshot copy output
+bindsym $mod+Ctrl+Shift+Print exec /usr/share/sway-contrib/grimshot copy output
 
 # Note that there's a trailing comma; this seems to be required if I want the
 # final directive to take effect, and I'm not sure why. `man xkeyboard-config`
