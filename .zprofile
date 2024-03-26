@@ -1,6 +1,5 @@
 export PATH=$HOME/bin:$PATH
 export HOSTNAME=`hostname`
-export GOPATH=~/.local/share/go
 
 export GOPATH=~/.local/share/go
 export GOPROXY=direct
